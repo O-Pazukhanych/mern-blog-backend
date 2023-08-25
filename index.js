@@ -3,13 +3,15 @@ import mongoose from 'mongoose';
 import multer from 'multer';
 import cors from 'cors';
 
-require('dotenv').config();
+import {} from 'dotenv/config';
 
 import { registerValidation, loginValidation } from './validations/auth.js';
 import { postCreateValidation } from './validations/post.js';
 
 import { checkAuth, handleValidationErrors } from './utils/index.js';
 import { UserController, PostController } from './controllers/index.js';
+
+console.log(process.env.PORT)
 
 const app = express();
 app.use(express.json());
